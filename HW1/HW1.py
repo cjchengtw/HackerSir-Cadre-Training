@@ -5,8 +5,13 @@ import re
 
 # 設定
 url  = "https://ilearn2.fcu.edu.tw/login/index.php"
-username = input('請輸入學號NID:')
-password = getpass.getpass('請輸入密碼:')
+while 1:
+    try:
+        username = input('請輸入學號NID:')
+        password = getpass.getpass('請輸入密碼:')
+        break
+    except:
+        print("Try Again")
 max_teachers = 2
 
 # 建立Session物件
